@@ -9,17 +9,17 @@ func main() {
 	fmt.Println("Welcome to video on slices")
 
 	var fruitList = []string{"Apple", "Mango", "Banana"}
-	fmt.Println(len(fruitList))
+	// fmt.Println(len(fruitList))
 
 	//the append method
 
 	fruitList = append(fruitList, "Test1", "Test2")
-	fmt.Println(fruitList)
+	// fmt.Println(fruitList)
 
 	//slice a slice or cut
 
 	fruitList = append(fruitList[1:3], "Test3") // start from 1 and end on the index 2
-	fmt.Println(fruitList)
+	// fmt.Println(fruitList)
 
 	highScores := make([]int, 4)
 
@@ -32,9 +32,23 @@ func main() {
 	// this smartly it appends values with append method and allocate new memory spaces to the variable values but by default it allocate only limited for performance
 
 	highScores = append(highScores, 444, 855, 666)
-	fmt.Println(highScores)
+	// fmt.Println(highScores)
 
 	sort.Ints(highScores) //sort the slice
-	fmt.Println(highScores)
-	fmt.Println(sort.IntsAreSorted(highScores)) // return true if the slice is sorted
+	// fmt.Println(highScores)
+	// fmt.Println(sort.IntsAreSorted(highScores)) // return true if the slice is sorted
+
+	//different operation on slices
+
+	// delete operation on slice
+
+	var courses = []string{"react", "javascript", "swift", "pyton", "golang"}
+	fmt.Println(courses)
+
+	index := 2
+
+	courses = append(courses[:index], courses[index+1:]...)
+
+	fmt.Println(courses)
+
 }
