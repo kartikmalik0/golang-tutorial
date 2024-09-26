@@ -14,8 +14,13 @@ func main() {
 
 	//delete from the map
 
-	delete(lan, "TS")
-	fmt.Println(lan)
+	// delete(lan, "TS")
+	// fmt.Println(lan)
 
 	//loops in map
+
+	for key, value := range lan {
+		fmt.Printf("For key %v, Value is %v\n", key, value)
+	}
+
 }
